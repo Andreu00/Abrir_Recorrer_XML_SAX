@@ -32,5 +32,18 @@ public class AccesoXMLSAX {
             return -1;
         }
     }
+    
+    public int parsearXMLconTitulosSAXhandler(File f){
+        try{
+            SAXParserFactory factory=SAXParserFactory.newInstance();
+            parser=factory.newSAXParser();
+            TitulosSAXhandler sh=new TitulosSAXhandler();
+            parser.parse(f, sh);
+            return 0;
+        }catch(Exception e){
+            e.printStackTrace();
+            return -1;
+        }
+    }
 
 }
