@@ -13,9 +13,9 @@ public class LibrosSAXhandler extends DefaultHandler {
         if(qName.equals("Libro")){
             System.out.println("Publicado en: "+atts.getValue(atts.getQName(0)));
         }else if(qName.equals("Titulo")){
-            System.out.println("\n"+"El titulo es: ");
+            System.out.print("\n"+"El titulo es: ");
         }else if(qName.equals("Autor")){
-            System.out.println("\n"+"El autor es: ");
+            System.out.print("El autor es: ");
         }
     }
 
@@ -26,7 +26,7 @@ public class LibrosSAXhandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if(qName.equals("Libro")){
-            System.out.println("\n--------------------------------------");
+            System.out.println("--------------------------------------");
         }
     }
 
