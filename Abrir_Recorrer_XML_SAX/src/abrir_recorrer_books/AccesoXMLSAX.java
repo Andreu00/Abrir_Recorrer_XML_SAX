@@ -19,14 +19,15 @@ import org.xml.sax.SAXException;
  * @author maget
  */
 public class AccesoXMLSAX {
+    //Permite interpretar el XML usando SAX
     SAXParser parser;
     
     public int parsearXMLconLibrosSAXhandler(File f){
         try{
-            SAXParserFactory factory=SAXParserFactory.newInstance();
+            SAXParserFactory factory=SAXParserFactory.newInstance();//Para leer los XML con el metodo SAX
             parser=factory.newSAXParser();
-            BooksSAXhandler sh=new BooksSAXhandler();
-            parser.parse(f, sh);
+            BooksSAXhandler sh=new BooksSAXhandler();//Metodo que te maneja y te duvuelve todos los datos del Libro
+            parser.parse(f, sh);//Leemos el XML con el fichero que le pasamos y el controlador de la informacion
             return 0;
         } catch (Exception ex) { 
             ex.printStackTrace();
@@ -36,10 +37,10 @@ public class AccesoXMLSAX {
     
     public int parsearXMLconTitulosSAXhandler(File f){
         try{
-            SAXParserFactory factory=SAXParserFactory.newInstance();
+            SAXParserFactory factory=SAXParserFactory.newInstance();//Para leer los XML con el metodo SAX
             parser=factory.newSAXParser();
-            TitulosSAXhandler sh=new TitulosSAXhandler();
-            parser.parse(f, sh);
+            TitulosSAXhandler sh=new TitulosSAXhandler();//Metodo para mostrar solamente el titulo de los libros
+            parser.parse(f, sh);//Leemos el XML con el fichero que le pasamos y el controlador de la informacion
             return 0;
         }catch(Exception e){
             e.printStackTrace();

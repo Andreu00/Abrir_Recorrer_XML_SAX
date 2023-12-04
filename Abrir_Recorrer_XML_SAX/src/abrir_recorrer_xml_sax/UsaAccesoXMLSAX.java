@@ -9,8 +9,8 @@ public class UsaAccesoXMLSAX {
         File f=new File("Libros.xml");
         AccesoXMLSAX a=new AccesoXMLSAX();
         
-        a.parsearXMLconLibrosSAXhandler(f);
-        //a.parsearXMLconTitulosSAXhandler(f);
+        //a.parsearXMLconLibrosSAXhandler(f);
+        a.parsearXMLconTitulosSAXhandler(f);
     }
     
 }
